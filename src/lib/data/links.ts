@@ -1,21 +1,11 @@
-import type { Link, LinkDefinition } from '../types/Link'
+import type { Link } from '../types/Link'
 
-export const linksDefinition: { [key: string]: LinkDefinition } = {
-    web: {
-        tag: 'personal',
-        url: new URL('https://dawichi.dev'),
+export const links: { [key: string]: Link } = {
+    personal: {
+        web: new URL('https://dawichi.dev'),
+        linkedin: new URL('https://linkedin.com/in/dawichi'),
     },
-    linkedin: {
-        tag: 'personal',
-        url: new URL('https://linkedin.com/in/dawichi'),
+    other: {
+        hello: new URL('https://linkedin.com/in/dawichi'),
     },
-}
-
-export const links: Link[] = []
-
-for (const key in linksDefinition) {
-  links.push({
-    alias: key,
-    ...linksDefinition[key]
-  })
 }
