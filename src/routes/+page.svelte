@@ -9,11 +9,13 @@
     <br />
 
     {#each Object.keys(links) as tag}
-        <div>{tag}</div>
-        <section class="grid grid-cols-4 gap-4">
-            {#each Object.keys(links[tag]) as alias}
-                <Card {alias} url={links[tag][alias]} />
-            {/each}
+        <section class="py-2">
+            <h2 class="py-2 text-xl"># {tag}</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+                {#each Object.keys(links[tag]) as alias}
+                    <Card {alias} url={links[tag][alias]} />
+                {/each}
+            </div>
         </section>
     {/each}
 </div>
