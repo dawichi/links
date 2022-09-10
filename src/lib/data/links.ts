@@ -1,6 +1,7 @@
-import type { Link } from '../types/Link'
+import type { LinkGroup } from '../types/Link'
 
-export const links: { [key: string]: Link } = {
+// Links indexed by group name
+export const links: { [key: string]: LinkGroup } = {
     personal: {
         linkedin: new URL('https://linkedin.com/in/dawichi'),
         github: new URL('https://github.com/dawichi'),
@@ -14,3 +15,6 @@ export const links: { [key: string]: Link } = {
         hello: new URL('https://linkedin.com/in/dawichi'),
     },
 }
+
+// Index all links in a single object
+export const linksIndex: LinkGroup = Object.values(links).reduce((acc, group) => ({ ...acc, ...group }), {})

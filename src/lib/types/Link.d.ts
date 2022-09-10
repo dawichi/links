@@ -1,3 +1,3 @@
-export type Link = {
+export type LinkGroup = {
     [key: string]: URL
 }
