@@ -10,10 +10,17 @@ export const links: { [key: string]: LinkGroup } = {
     utils: {
         convertio: new URL('https://convertio.co/'),
         microcopy: new URL('https://www.microcopy.me/'),
+        spritegen: new URL('https://spritegen.website-performance.org/'),
+        spritegif: new URL('https://onlinegiftools.com/convert-sprite-sheet-to-gif'),
+        patternpad: new URL('https://patternpad.com/'),
     },
-    others: {
-        hello: new URL('https://linkedin.com/in/dawichi'),
+    colors: {
+        coolors: new URL('https://coolors.co/'),
+        colorhunt: new URL('https://colorhunt.co/'),
+        colorpicker: new URL('https://imagecolorpicker.com/'),
+        colorgradient: new URL('https://mycolor.space/gradient3'),
     },
+    others: {},
 }
 
 // Index all links in a single object
